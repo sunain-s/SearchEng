@@ -3,6 +3,12 @@
 # Performs PR algorithm and provides ranking for searched terms
 # Utilises bs4's BeautifulSoup for html parsing
 
+def page_rank_algo():
+  pass
+
+def setup():
+  pass
+
 def main():
   pass
 
