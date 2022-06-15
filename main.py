@@ -4,10 +4,13 @@
 # ==> PR(A) = (1 - d) + d[PR(T1)/C(T1) + ..... + PR(Tn)/C(Tn)]
 # Utilises bs4's BeautifulSoup for html parsing
 
+def file_rename():
+  pass
+
 def page_rank_algo():
   pass
 
-def setup():
+def pr_setup():
   pass
 
 def main():
