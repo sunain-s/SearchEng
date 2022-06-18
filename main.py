@@ -43,5 +43,9 @@ page_ranks = [1 for i in range(len(htmls))]
 inbound_pages = [[] for i in range(len(htmls))] 
 outbound_counts = []
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+# Runs program
+
 if __name__ == '__main__':
+    file_rename()
     main()
