@@ -5,19 +5,25 @@
 # Utilises bs4's BeautifulSoup for html parsing
 
 def file_rename():
-  pass
+    pass
 
 def page_rank_algo():
-  pass
+    pass
 
 def pr_setup():
-  pass
+    pass
 
+def call_pr(iterations):
+    for x in range(iterations):
+        for i in range(len(htmls)):
+            page_rank_algo(i, inbound_pages[i])
+        print(page_ranks)
+      
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
 def main():
-  pass
+    pass
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Globals
