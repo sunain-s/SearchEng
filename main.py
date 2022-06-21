@@ -18,8 +18,13 @@ def file_rename():
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # PageRank Functions
 
-def page_rank_algo():
-    pass
+def page_rank_algo(file_index, inbounds):
+    tn = 0
+    for page in inbounds:
+        tx = page_ranks[page]/outbound_counts[page]
+        tn += tx
+    pr = (1 - d) + (d * tn)
+    page_ranks[file_index] = pr
 
 def pr_setup():
     pass
