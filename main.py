@@ -32,6 +32,7 @@ def call_pr(iterations):
 # Main Function
 
 def main():
+    file_rename()
     pass
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -51,5 +52,4 @@ rank_scores = [0 for x in range(len(htmls))]
 # Runs program
 
 if __name__ == '__main__':
-    file_rename()
     main()
