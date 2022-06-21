@@ -11,7 +11,9 @@ import os
 from bs4 import BeautifulSoup
 
 def file_rename():
-    pass
+    for file in htmls:
+        if int(str(file).strip('.html')) != htmls.index(file):
+            os.rename(f'webpages/{file}', f'{htmls.index(file)}.html')
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # PageRank Functions
