@@ -32,6 +32,13 @@ def pr_setup():
         with open(f'webpages/{i}.html', 'r') as file:
             soup = BeautifulSoup(file, features="html.parser")
 
+            for link in soup.find_all('a', href=True):
+                linked_to = int(str(link['href']).strip('.html'))
+                inbound_pages[linked_to].append(i)
+                outbound += 1
+            outbound_counts[i] = outbound
+            page_titles[i] = soup.title.string
+
 def call_pr(iterations):
     for x in range(iterations):
         for i in range(len(htmls)):
