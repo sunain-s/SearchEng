@@ -49,7 +49,9 @@ def call_pr(iterations):
 # Search Functions
 
 def input_search():
-    pass
+    search_term = input('Enter search:  ')
+    search_words = search_term.split(' ')
+    return search_words
 
 def get_content():
     pass
