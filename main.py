@@ -27,7 +27,10 @@ def page_rank_algo(file_index, inbounds):
     page_ranks[file_index] = pr
 
 def pr_setup():
-    pass
+    for i in range(len(htmls)):
+        outbound = 0
+        with open(f'webpages/{i}.html', 'r') as file:
+            soup = BeautifulSoup(file, features="html.parser")
 
 def call_pr(iterations):
     for x in range(iterations):
