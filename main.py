@@ -63,6 +63,9 @@ def get_content(file_index):
         del file_words[-2:]
         return file_words
     
+def get_search_score(file_index, search_words, file_words):
+    pass
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
