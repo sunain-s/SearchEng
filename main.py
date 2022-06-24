@@ -53,8 +53,11 @@ def input_search():
     search_words = search_term.split(' ')
     return search_words
 
-def get_content():
-    pass
+def get_content(file_index):
+    with open(f'webpages/{file_index}.html', 'r') as file:
+        soup = BeautifulSoup(file, features="html.parser")
+        tag = soup.select_one('head')
+        tag.decompose()
    
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
