@@ -58,7 +58,11 @@ def get_content(file_index):
         soup = BeautifulSoup(file, features="html.parser")
         tag = soup.select_one('head')
         tag.decompose()
-   
+        file_words = soup.get_text().replace('\n', ' ').split(' ')
+        del file_words[:4]
+        del file_words[-2:]
+        return file_words
+    
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
