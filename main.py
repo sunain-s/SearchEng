@@ -66,6 +66,9 @@ def get_content(file_index):
 def get_search_score(file_index, search_words, file_words):
     pass
 
+def call_search():
+    pass
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
