@@ -81,6 +81,20 @@ def call_search():
     print(f'\nSearch Scores: {search_scores}')
     
 #-------------------------------------------------------------------------------------------------------------------------------------------------
+# Ranking functions
+
+def final_rank_scores():
+    for i in range(len(htmls)):
+        rank_scores[i] = page_ranks[i] * search_scores[i]
+    print(f'\nFinal Combined Scores: {rank_scores}')
+
+def create_ranked_list(rank_scores, page_titles, html_files):
+    pass
+
+def display_results(sorted_ranks, sorted_titles):
+    pass
+    
+#-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
 def main():
