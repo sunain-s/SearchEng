@@ -64,7 +64,11 @@ def get_content(file_index):
         return file_words
     
 def get_search_score(file_index, search_words, file_words):
-    pass
+    score = 1
+    for i in file_words:
+        for word in search_words:
+            if word in i:
+                score += 0.5
 
 def call_search():
     pass
