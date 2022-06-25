@@ -74,8 +74,12 @@ def get_search_score(file_index, search_words, file_words):
     search_scores[file_index] = score
 
 def call_search():
-    pass
-
+    search_words = input_search()
+    for i in range(len(htmls)):
+        file_words = get_content(i)
+        get_search_score(i, search_words, file_words)
+    print(f'\nSearch Scores: {search_scores}')
+    
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
