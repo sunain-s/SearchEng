@@ -69,6 +69,9 @@ def get_search_score(file_index, search_words, file_words):
         for word in search_words:
             if word in i:
                 score += 0.5
+            if word == i:
+                score += 1
+    search_scores[file_index] = score
 
 def call_search():
     pass
