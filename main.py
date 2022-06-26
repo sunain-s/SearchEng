@@ -107,7 +107,12 @@ def create_ranked_list(rank_scores, page_titles, html_files):
     return sorted_ranks, sorted_titles, sorted_files
 
 def display_results(sorted_ranks, sorted_titles):
-    pass
+    print('\n\nTop Results:\n')
+    top_display_num = 5
+    if len(htmls) < top_display_num:
+        top_display_num = len(htmls)
+    for i in range(top_display_num):
+        print(f'{i + 1} - {sorted_titles[i]} (rank: {sorted_ranks[i]})')
     
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
