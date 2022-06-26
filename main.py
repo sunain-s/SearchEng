@@ -93,6 +93,12 @@ def create_ranked_list(rank_scores, page_titles, html_files):
     sorted_titles = []
     sorted_files = []
     i = 0
+    
+    while i < len(htmls):
+        top = max(rank_scores)
+        sorted_ranks.append(top)
+        sorted_titles.append(page_titles[rank_scores.index(top)])
+        sorted_files.append(html_files[rank_scores.index(top)])
 
 def display_results(sorted_ranks, sorted_titles):
     pass
