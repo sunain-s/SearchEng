@@ -89,7 +89,10 @@ def final_rank_scores():
     print(f'\nFinal Combined Scores: {rank_scores}')
 
 def create_ranked_list(rank_scores, page_titles, html_files):
-    pass
+    sorted_ranks = []
+    sorted_titles = []
+    sorted_files = []
+    i = 0
 
 def display_results(sorted_ranks, sorted_titles):
     pass
