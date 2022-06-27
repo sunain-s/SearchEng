@@ -113,6 +113,18 @@ def display_results(sorted_ranks, sorted_titles):
         top_display_num = len(htmls)
     for i in range(top_display_num):
         print(f'{i + 1} - {sorted_titles[i]} (rank: {sorted_ranks[i]})')
+        
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+# Select Webpage functions
+
+def check_input_valid(inp):
+    pass
+
+def select_page(sorted_htmls):
+    pass
+
+def open_page(sorted_htmls, index):
+    pass
     
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
