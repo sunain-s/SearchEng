@@ -123,7 +123,9 @@ def check_input_valid(inp):
     return False
 
 def select_page(sorted_htmls):
-    pass
+    selected_num = int(input("\nEnter the corresponding number of the webpage you'd like to open:  "))
+    if check_input_valid(selected_num):
+        open_page(sorted_htmls, selected_num)
 
 def open_page(sorted_htmls, index):
     pass
