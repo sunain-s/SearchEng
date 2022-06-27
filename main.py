@@ -118,7 +118,9 @@ def display_results(sorted_ranks, sorted_titles):
 # Select Webpage functions
 
 def check_input_valid(inp):
-    pass
+    if inp > 0 and inp <= len(htmls):
+        return True
+    return False
 
 def select_page(sorted_htmls):
     pass
