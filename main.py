@@ -37,17 +37,26 @@ def page_rank_algo(file_index, inbounds):
     page_ranks[file_index] = pr
 
 def pr_setup():
+    '''
+    Gets all necessary information before performing the PageRank Algorithm
+    - Finds which pages link to other pages
+    - Number of links on a page
+    - Page titles
+    '''
+    
+    # iterates through every html file
     for i in range(len(htmls)):
         outbound = 0
         with open(f'webpages/{i}.html', 'r') as file:
             soup = BeautifulSoup(file, features="html.parser")
 
+            # adds page to inbound list, and adds a count to outbound list
             for link in soup.find_all('a', href=True):
                 linked_to = int(str(link['href']).strip('.html'))
                 inbound_pages[linked_to].append(i)
                 outbound += 1
             outbound_counts[i] = outbound
-            page_titles[i] = soup.title.string
+            page_titles[i] = soup.title.string # gets page title
 
 def call_pr(iterations):
     for x in range(iterations):
