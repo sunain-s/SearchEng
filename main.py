@@ -59,10 +59,14 @@ def pr_setup():
             page_titles[i] = soup.title.string # gets page title
 
 def call_pr(iterations):
+    '''
+    Calls the PageRank Algorithm for the stated number of interations
+    '''
+
     for x in range(iterations):
         for i in range(len(htmls)):
             page_rank_algo(i, inbound_pages[i])
-        print(page_ranks)
+        print(f'Iteration {x + 1}:  {page_ranks}')
       
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Search Functions
