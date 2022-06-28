@@ -136,7 +136,13 @@ def open_page(sorted_htmls, index):
 
 def main():
     file_rename()
-    pass
+    pr_setup()
+    call_pr(100)
+    call_search()
+    final_rank_scores()
+    sorted_ranks, sorted_titles, sorted_files, sorted_snippets = create_ranked_list(rank_scores[:], page_titles[:], htmls[:], page_snippets[:]) # passing in copies of the original lists
+    display_results(sorted_ranks, sorted_titles, sorted_snippets, top_display_num)
+    select_page(sorted_files)
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Globals
