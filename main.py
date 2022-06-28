@@ -128,7 +128,8 @@ def select_page(sorted_htmls):
         open_page(sorted_htmls, selected_num)
 
 def open_page(sorted_htmls, index):
-    pass
+    file = sorted_htmls[index - 1]
+    os.startfile(f'webpages\{file}')
     
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
