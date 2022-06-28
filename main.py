@@ -8,9 +8,15 @@
 # Imports
 
 import os
+import random
 from bs4 import BeautifulSoup
 
 def file_rename():
+    '''
+    Renames new files to the standardised file names: 0.html, 1.html etc
+    Allows for simpler use within the program => file name is the index of the file in a list
+    '''
+
     for file in htmls:
         if int(str(file).strip('.html')) != htmls.index(file):
             os.rename(f'webpages/{file}', f'{htmls.index(file)}.html')
