@@ -25,6 +25,10 @@ def file_rename():
 # PageRank Functions
 
 def page_rank_algo(file_index, inbounds):
+    '''
+    Performs the PageRank Algorithm for a single page
+    '''
+
     tn = 0
     for page in inbounds:
         tx = page_ranks[page]/outbound_counts[page]
