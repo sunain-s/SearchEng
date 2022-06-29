@@ -72,9 +72,13 @@ def call_pr(iterations):
 # Search Functions
 
 def input_search():
-    search_term = input('Enter search:  ')
-    search_words = search_term.split(' ')
-    return search_words
+    '''
+    Gets user search term and splits into separate words
+    '''
+
+    search_term = input('\nEnter search:  ')
+    search_words = search_term.lower().split(' ')
+    return search_term, search_words
 
 def get_content(file_index):
     with open(f'webpages/{file_index}.html', 'r') as file:
