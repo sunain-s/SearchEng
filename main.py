@@ -95,6 +95,12 @@ def get_content(file_index):
         # deleting empty string data points in list
         del file_words[:4]
         del file_words[-2:]
+
+        # getting a random snippet of the text
+        rnd_num = random.randint(1, len(file_words) - 10)
+        snippet = str(file_words[rnd_num] + ' ' +  file_words[rnd_num + 1] + ' ' + file_words[rnd_num + 2] + ' ' + file_words[rnd_num + 3] + ' ' + file_words[rnd_num + 4])
+        page_snippets[file_index] = snippet
+        return file_words
     
 def get_search_score(file_index, search_words, file_words):
     score = 1
