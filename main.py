@@ -81,14 +81,20 @@ def input_search():
     return search_term, search_words
 
 def get_content(file_index):
+    '''
+    Reads the content of each webpage using BeautifulSoup
+    Removes newlines and splits into a list of words
+    '''
+
     with open(f'webpages/{file_index}.html', 'r') as file:
         soup = BeautifulSoup(file, features="html.parser")
         tag = soup.select_one('head')
         tag.decompose()
-        file_words = soup.get_text().replace('\n', ' ').split(' ')
+        file_words = soup.get_text().lower().replace('\n', ' ').split(' ')
+
+        # deleting empty string data points in list
         del file_words[:4]
         del file_words[-2:]
-        return file_words
     
 def get_search_score(file_index, search_words, file_words):
     score = 1
