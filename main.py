@@ -102,8 +102,17 @@ def get_content(file_index):
         page_snippets[file_index] = snippet
         return file_words
     
-def get_search_score(file_index, search_words, file_words):
+def get_search_score(file_index, search_term, search_words, file_words):
+    '''
+    Assigns a search score dependant on the number of times each part of the search term appears in a file
+    - default score of 1
+    - add 1 if exact search word is found
+    - add 0.5 if search word is within another word
+    '''
+
     score = 1
+    if search_term.lower() == page_titles[file_index].lower():
+        score += 10
     for i in file_words:
         for word in search_words:
             if word in i:
