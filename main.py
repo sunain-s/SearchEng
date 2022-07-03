@@ -136,6 +136,10 @@ def call_search():
 # Ranking functions
 
 def final_rank_scores():
+    '''
+    Calculates final rank scores for each page using following formula: Final Rank = PageRank * Search Score
+    '''
+
     for i in range(len(htmls)):
         rank_scores[i] = page_ranks[i] * search_scores[i]
     print(f'\nFinal Combined Scores: {rank_scores}')
