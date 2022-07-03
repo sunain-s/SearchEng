@@ -144,10 +144,16 @@ def final_rank_scores():
         rank_scores[i] = page_ranks[i] * search_scores[i]
     print(f'\nFinal Combined Scores: {rank_scores}')
 
-def create_ranked_list(rank_scores, page_titles, html_files):
+def create_ranked_list(rank_scores, page_titles, html_files, page_snippets):
+    '''
+    Creates a ranked list based on Final Rank, and makes corresponding lists for webpage titles, html files and page snippets
+    '''
+
+    # empty lists
     sorted_ranks = []
     sorted_titles = []
     sorted_files = []
+    sorted_snippets = []
     i = 0
     
     while i < len(htmls):
