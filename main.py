@@ -155,18 +155,16 @@ def create_ranked_list(rank_scores, page_titles, html_files, page_snippets):
     sorted_files = []
     sorted_snippets = []
     i = 0
-    
+
+    # iterates until all pages are sorted
     while i < len(htmls):
-        top = max(rank_scores)
+        top = max(rank_scores) # finds top final rank
+
+        # adds corresponding final rank, title, file and snippet to new lists
         sorted_ranks.append(top)
         sorted_titles.append(page_titles[rank_scores.index(top)])
         sorted_files.append(html_files[rank_scores.index(top)])
-        index = rank_scores.index(top)
-        del rank_scores[index]
-        del page_titles[index]
-        del html_files[index]
-        i += 1
-    return sorted_ranks, sorted_titles, sorted_files
+        sorted_snippets.append(page_snippets[rank_scores.index(top)])
 
 def display_results(sorted_ranks, sorted_titles):
     print('\n\nTop Results:\n')
