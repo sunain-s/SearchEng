@@ -166,6 +166,15 @@ def create_ranked_list(rank_scores, page_titles, html_files, page_snippets):
         sorted_files.append(html_files[rank_scores.index(top)])
         sorted_snippets.append(page_snippets[rank_scores.index(top)])
 
+        # removes the top rank for next loop
+        index = rank_scores.index(top)
+        del rank_scores[index]
+        del page_titles[index]
+        del html_files[index]
+        del page_snippets[index]
+        i += 1
+    return sorted_ranks, sorted_titles, sorted_files, sorted_snippets
+
 def display_results(sorted_ranks, sorted_titles):
     print('\n\nTop Results:\n')
     top_display_num = 5
