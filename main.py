@@ -200,9 +200,22 @@ def check_input_valid(inp, top_display_num):
         return True
     return False
 
+def check_input_valid(inp, top_display_num):
+    '''
+    Check if the inputted number is valid
+    '''
+
+    if inp > 0 and inp <= top_display_num:
+        return True
+    return False
+        
 def select_page(sorted_htmls):
+    '''
+    Select which page the user wants to open
+    '''
+
     selected_num = int(input("\nEnter the corresponding number of the webpage you'd like to open:  "))
-    if check_input_valid(selected_num):
+    if check_input_valid(selected_num, 5):
         open_page(sorted_htmls, selected_num)
 
 def open_page(sorted_htmls, index):
