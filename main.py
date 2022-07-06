@@ -175,13 +175,18 @@ def create_ranked_list(rank_scores, page_titles, html_files, page_snippets):
         i += 1
     return sorted_ranks, sorted_titles, sorted_files, sorted_snippets
 
-def display_results(sorted_ranks, sorted_titles):
+def display_results(sorted_ranks, sorted_titles, sorted_snippets, top_display_num):
+    '''
+    Outputs the top 5 pages, based on PageRank and the search term
+    '''
+
     print('\n\nTop Results:\n')
-    top_display_num = 5
+    # checks if there are the required number of pages
     if len(htmls) < top_display_num:
         top_display_num = len(htmls)
     for i in range(top_display_num):
-        print(f'{i + 1} - {sorted_titles[i]} (rank: {sorted_ranks[i]})')
+        print(f'\n{i + 1} - {sorted_titles[i]} (rank: {sorted_ranks[i]})')
+        print(f'    - {sorted_snippets[i]}...')
         
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Select Webpage functions
