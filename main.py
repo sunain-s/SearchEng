@@ -191,8 +191,12 @@ def display_results(sorted_ranks, sorted_titles, sorted_snippets, top_display_nu
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Select Webpage functions
 
-def check_input_valid(inp):
-    if inp > 0 and inp <= len(htmls):
+def check_input_valid(inp, top_display_num):
+    '''
+    Check if the inputted number is valid
+    '''
+
+    if inp > 0 and inp <= top_display_num:
         return True
     return False
 
