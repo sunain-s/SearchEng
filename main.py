@@ -243,12 +243,16 @@ def main():
 # Globals
 
 d = 0.85
+top_display_num = 5
 current_path = os.getcwd()
 htmls = [file for file in os.listdir(f'{current_path}/webpages/') if file.endswith('.html')]
+
+# creating all lists required to the necessary length
 page_ranks = [1 for x in range(len(htmls))]
 inbound_pages = [[] for x in range(len(htmls))] 
 outbound_counts = [0 for x in range(len(htmls))]
 page_titles = ['' for x in range(len(htmls))]
+page_snippets = ['' for x in range(len(htmls))]
 search_scores = [1 for x in range(len(htmls))]
 rank_scores = [0 for x in range(len(htmls))]
 
