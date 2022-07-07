@@ -67,7 +67,7 @@ def call_pr(iterations):
         for i in range(len(htmls)):
             page_rank_algo(i, inbound_pages[i])
         print(f'Iteration {x + 1}:  {page_ranks}')
-      
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Search Functions
 
@@ -101,7 +101,7 @@ def get_content(file_index):
         snippet = str(file_words[rnd_num] + ' ' +  file_words[rnd_num + 1] + ' ' + file_words[rnd_num + 2] + ' ' + file_words[rnd_num + 3] + ' ' + file_words[rnd_num + 4])
         page_snippets[file_index] = snippet
         return file_words
-    
+
 def get_search_score(file_index, search_term, search_words, file_words):
     '''
     Assigns a search score dependant on the number of times each part of the search term appears in a file
@@ -131,7 +131,7 @@ def call_search():
         file_words = get_content(i)
         get_search_score(i, search_term, search_words, file_words)
     print(f'\nSearch Scores: {search_scores}')
-    
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Ranking functions
 
@@ -187,18 +187,9 @@ def display_results(sorted_ranks, sorted_titles, sorted_snippets, top_display_nu
     for i in range(top_display_num):
         print(f'\n{i + 1} - {sorted_titles[i]} (rank: {sorted_ranks[i]})')
         print(f'    - {sorted_snippets[i]}...')
-        
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Select Webpage functions
-
-def check_input_valid(inp, top_display_num):
-    '''
-    Check if the inputted number is valid
-    '''
-
-    if inp > 0 and inp <= top_display_num:
-        return True
-    return False
 
 def check_input_valid(inp, top_display_num):
     '''
@@ -219,9 +210,13 @@ def select_page(sorted_htmls):
         open_page(sorted_htmls, selected_num)
 
 def open_page(sorted_htmls, index):
+    '''
+    Opens the webpage selected in the user's default browser
+    '''
+
     file = sorted_htmls[index - 1]
     os.startfile(f'webpages\{file}')
-    
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 # Main Function
 
