@@ -226,6 +226,10 @@ def open_page(sorted_htmls, index):
 # Main Function
 
 def main():
+    '''
+    Main function that calls all other functions
+    '''
+
     file_rename()
     pr_setup()
     call_pr(100)
