@@ -10,8 +10,8 @@ A CLI search engine made using Python, implementing the PageRank algorithm
 - must display page titles
 
 # How To Run
-
-coming soon!
+Run 'main.py' with python3, and use in command line.\
+Can add more webpages of any name - program renames them as necessary
 
 # What I Learnt
 coming soon!
