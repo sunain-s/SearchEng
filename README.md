@@ -14,7 +14,14 @@ Install bs4 module and run 'main.py' with python3, and use in command line.\
 Can add more webpages of any name - program renames them as necessary
 
 # What I Learnt
-coming soon!
+- os.getcwd() to get the current path of the file being run
+- os.listdir() to get a list of html files in a directory
+- using https://www.plot-generator.org.uk/story/ to create html content
+- implementing PR
+- using Beautiful Soup extract elements from html files
+- designing a search score algorithm and combining with PR
+- retrieving a random text snippet from a html file
+- how to open a file using os.startfile()
 
 # Improvements
 coming soon!
