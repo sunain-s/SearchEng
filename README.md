@@ -24,4 +24,8 @@ Can add more webpages of any name - program renames them as necessary
 - how to open a file using os.startfile()
 
 # Improvements
-coming soon!
+There is a clear improvement that can be made here:
+- ==> implement it within an interface
+
+This would involve creating my own search engine interface similar to Google's using HTML, CSS and JS and linking it to my python script and output results on the interface.\
+Following on from this, is to open the webpages within the same application, essentially creating my own web browser.
